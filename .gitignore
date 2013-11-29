@@ -1,13 +1,8 @@
-# Bootstrap
-app/bootstrap*
-
-# Symfony directories
+composer.lock
+phpunit.xml
+nbproject
 vendor/*
-*/logs/*
-*/cache/*
-web/uploads/*
-web/bundles/*
-
-# Configuration files
-app/config/parameters.ini
-app/config/parameters.yml
+.settings
+.buildpath
+.project
+composer.phar

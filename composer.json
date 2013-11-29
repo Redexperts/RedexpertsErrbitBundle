@@ -1,0 +1,24 @@
+{
+    "name": "redexperts/errbit-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Errbit Integration Bundle",
+    "keywords": ["Errbit", "Redexperts"],
+    "homepage": "www.redexperts.net",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Korsak",
+            "email": "daniel.korsak@redexperts.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1",
+        "emgiezet/errbit-php": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Redexperts\\ErrbitBundle": "" }
+    },
+    "target-dir": "Redexperts/ErrbitBundle"
+}
