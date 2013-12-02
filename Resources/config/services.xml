@@ -10,7 +10,12 @@
 
     <services>
         <service id="redexperts.errbit.exception.listener" class="%redexperts_errbit.exception.listener.class%">
-            <argument>%redexperts_errbit.errbit%</argument>
+            <argument type="service" id="redexperts.errbit"/>
+            <argument></argument>
+            <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException"/>
+        </service>
+        <service id="redexperts.errbit" factory-class="Redexperts\ErrbitBundle\Errbit\ErrbitFactory" class="Errbit\Errbit" factory-method="get" public="false">
+            <argument/>
         </service>
     </services>
 

@@ -2,12 +2,16 @@
 
 namespace Redexperts\ErrbitBundle\EventListener;
 
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Errbit\Errbit;
 
 class ErrbitExceptionListener
 {
+    /**
+     * @var Errbit\Errbit
+     */
+    private $errbit;
+
     /**
      * @var boolean
      */
@@ -16,12 +20,13 @@ class ErrbitExceptionListener
     /**
      * Constructor
      *
-     * @param array $errbitParams
+     * @param Errbit\Errbit $errbit
+     * @param boolean       $enableLog
      */
-    public function __construct(array $errbitParams)
+    public function __construct(Errbit $errbit, $enableLog)
     {
-        $this->enableLog = $errbitParams['errbit_enable_log'];
-        Errbit::instance()->configure($errbitParams);
+        $this->enableLog = $enableLog;
+        $this->errbit = $errbit;
     }
 
     /**
@@ -31,9 +36,9 @@ class ErrbitExceptionListener
      */
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
-        if ($this->enableLog && !$event->getException() instanceof NotFoundHttpException) {
+        if ($this->enableLog) {
             // get exeption and send to errbit
-            Errbit::instance()->notify($event->getException());
+            $this->errbit->notify($event->getException());
         }
     }
 }

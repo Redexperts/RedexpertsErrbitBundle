@@ -6,3 +6,4 @@ vendor/*
 .buildpath
 .project
 composer.phar
+php-cs-fixer

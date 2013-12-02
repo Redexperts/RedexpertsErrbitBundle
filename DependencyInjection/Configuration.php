@@ -21,12 +21,13 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('redexperts_errbit');
-        
+
         $rootNode
             ->children()
                 ->arrayNode('errbit')
+                    ->isRequired()
                     ->children()
-                        ->scalarNode('errbit_enable_log')
+                        ->booleanNode('errbit_enable_log')
                             ->defaultTrue()
                             ->isRequired()
                         ->end()
@@ -36,7 +37,7 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('host')
                             ->isRequired()
                         ->end()
-                        ->scalarNode('port')
+                        ->integerNode('port')
                             ->defaultValue('80')
                             ->isRequired()
                         ->end()
@@ -44,7 +45,8 @@ class Configuration implements ConfigurationInterface
                             ->defaultValue('local')
                             ->isRequired()
                         ->end()
-                        ->scalarNode('skipped_exceptions')
+                        ->arrayNode('skipped_exceptions')
+                            ->prototype('scalar')->end()
                         ->end()
                     ->end()
                 ->end()

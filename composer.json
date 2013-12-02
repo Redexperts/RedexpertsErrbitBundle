@@ -17,6 +17,9 @@
         "symfony/framework-bundle": "~2.1",
         "emgiezet/errbit-php": "dev-master"
     },
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
     "autoload": {
         "psr-0": { "Redexperts\\ErrbitBundle": "" }
     },
