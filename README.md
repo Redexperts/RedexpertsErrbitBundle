@@ -1,4 +1,4 @@
-RedexpertsErrbitBundle
+Redexperts Errbit Bundle
 ======================
 
-RedexpertsErrbitBundle
+Integrate errbit with Symfony 2
