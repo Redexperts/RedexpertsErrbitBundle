@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony Errbit Integration Bundle",
     "keywords": ["Errbit", "Redexperts"],
-    "homepage": "www.redexperts.net",
+    "homepage": "http://www.redexperts.net",
     "license": "MIT",
     "authors": [
         {
