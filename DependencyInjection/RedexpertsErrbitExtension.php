@@ -27,6 +27,7 @@ class RedexpertsErrbitExtension extends Extension
 
         $errbitFactory = $container->getDefinition('redexperts.errbit');
         $errbitFactory->replaceArgument(0, $config['errbit']);
+
         $eventListener = $container->getDefinition('redexperts.errbit.exception.listener');
         $eventListener->replaceArgument(1, $config['errbit']['errbit_enable_log']);
     }
