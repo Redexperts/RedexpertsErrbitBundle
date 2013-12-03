@@ -3,7 +3,8 @@ Redexperts Errbit Bundle
 
 [![Build Status](https://travis-ci.org/Redexperts/RedexpertsErrbitBundle.png?branch=master)](https://travis-ci.org/Redexperts/RedexpertsErrbitBundle)
 
-Integrate errbit with Symfony 2
+This bundle integrates [errbit](https://github.com/errbit/errbit) and [errbitPHP] (https://github.com/emgiezet/errbitPHP) client with Symfony 2 by kernel.exception event listener.
+
 
 ## Installation
 
