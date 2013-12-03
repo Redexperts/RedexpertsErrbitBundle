@@ -24,11 +24,5 @@ class RedexpertsErrbitExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
-
-        $errbitFactory = $container->getDefinition('redexperts.errbit');
-        $errbitFactory->replaceArgument(0, $config['errbit']);
-
-        $eventListener = $container->getDefinition('redexperts.errbit.exception.listener');
-        $eventListener->replaceArgument(1, $config['errbit']['errbit_enable_log']);
     }
 }
