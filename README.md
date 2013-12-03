@@ -38,6 +38,7 @@ public function registerBundles()
     );
 }
 ```
+## Configuration
 
 Configure bundle in your /app/config.yml file:
 
@@ -50,7 +51,7 @@ redexperts_errbit:
         host:              HOST #errbit host
         port:              PORT # default 80
         environment_name:  ENVIRONMENT_NAME #default local - can be test,prod etc.
-        skipped_exceptions:  [] #list of skipped exceptions ehich you do not need to log by errbit
+        skipped_exceptions:  [] #list of skipped exceptions which you do not need to log by errbit
 ```
 
 That's it
