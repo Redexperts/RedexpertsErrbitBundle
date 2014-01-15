@@ -15,7 +15,7 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "~2.1",
-        "emgiezet/errbit-php": "dev-master"
+        "emgiezet/errbit-php": "1.0.2"
     },
     "require-dev": {
         "mockery/mockery": "dev-master"
